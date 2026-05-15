@@ -1,0 +1,7 @@
+{
+  "valuable": true,
+  "question": "Go 中 json.Unmarshal 解析日期格式（如 \"2026-05-15\"）的时间字段报错，默认不支持非 RFC3339 格式",
+  "answer": "自定义一个时间类型，实现 UnmarshalJSON 接口，在其中使用 time.Parse(\"2006-01-02\", s) 按实际日期格式解析字符串，然后在结构体中用该自定义类型替代 time.Time",
+  "keywords": ["Go", "json.Unmarshal", "time.Parse", "UnmarshalJSON", "日期解析", "自定义JSON反序列化"],
+  "globs": ["**/*.go"]
+}
